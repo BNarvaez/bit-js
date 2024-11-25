@@ -51,11 +51,13 @@ desafio4('Juan', 'Perez')
 
 //Crear una función que reciba dos párametros, un nombre y un apellido y retorne el nombre completo, primero el apellido y luego el nombre.
 
+/*function desafio5(nombre, apellido) {
+    return  apellido + " " + nombre;
+}
 
-
-
-
-
+let valorRetornado = desafio5('Brayan', 'Narvaez');
+let valorRetornado1 = desafio5('Valentina', 'Restan');
+console.log(valorRetornado , valorRetornado1)*/
 
 
 
@@ -64,11 +66,13 @@ desafio4('Juan', 'Perez')
 // Crear una función que reciba cuatro párametros, un nombre, una prenda, un color y una cantidad y retorne: ____ tiene __ ____ de color ____. Ej entrada: pepita, camisas, azul, 2 Ej salida: Pepita tiene 2 camisas de color azul.
 
 
+/*function desafio6(nombre, prenda, color, cantidad) {
+    return nombre + ' tiene ' + cantidad + ' ' + prenda + ' de color ' + color+'.';
+}
 
-
-
-
-
+let resultado = desafio6('Brayan', 'camisas', 'azul', 3);
+let resultado2 = desafio6('Karen', 'vestidos', 'rosado', 2);
+console.log(resultado)*/
 
 
 
@@ -78,13 +82,12 @@ desafio4('Juan', 'Perez')
 // Crear una función para saludar, si la función recibe un nombre, imprimir por consola: Hola, ____! Si la función no recibe un nombre, imprimir: Hola, desconocido!
 
 
+function desafio7(nombre = 'desconocido'){
+    console.log(`Hola, ${nombre}!`)
+}
 
-
-
-
-
-
-
+desafio7('Brayan');
+desafio7();
 
 
 
@@ -93,7 +96,7 @@ desafio4('Juan', 'Perez')
 Ej: entrada: 8,4
 Ej: salida: 8 + 4 = 12 */
 
-function sumar(a, b){
+/*function sumar(a, b){
     const resultado = a + b;
     console.log(`${a} + ${b} = ${resultado}`);
     
@@ -145,7 +148,7 @@ function potenciar(a, b){
 }
 
 potenciar(8, 4);
-potenciar(100,25);
+potenciar(100,25);*/
 
 
 // PEMDAS

@@ -79,7 +79,8 @@ function miFuncion3() {
 }
 
 let valorRetornado = miFuncion3();
-//console.log(valorRetornado);
+console.log(valorRetornado);
+
 
 /* OPERADORES */
 // aritméticos
