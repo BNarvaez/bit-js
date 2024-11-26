@@ -75,11 +75,11 @@ function miFuncion2(apellido = 'Pérez') {
 //miFuncion2();
 
 function miFuncion3() {
-  return 'cadena de texto';
+  //return 'cadena de texto';
 }
 
 let valorRetornado = miFuncion3();
-console.log(valorRetornado);
+//console.log(valorRetornado);
 
 
 /* OPERADORES */
@@ -108,8 +108,29 @@ miVariable = true;
 
 
 
+function sumar(a, b) {
+    return a + b
+}
 
+const resultadoSuma = sumar(8, 4);
+console.log(resultadoSuma * 2);
 
-
-
+ if(operacion === 'suma'){
+        console.log(`${a} + ${b} = ${a + b}`);
+    }
+    if(operacion === 'resta'){
+        console.log(`${a} - ${b} = ${a - b}`)
+    }
+    if(operacion === multiplica){
+        console.log(`${a} x ${b} = ${a * b}`)
+    }
+    if(operacion === dividir){
+        console.log(`${a} / ${b} = ${a / b}`)
+    }
+    if(operacion === modular){
+        console.log(`${a} % ${b} = ${a % b}`)
+    }
+    if(operacion === potenciar){
+        console.log(`${a} ^${b} = ${a ** b}`)
+    }
 
