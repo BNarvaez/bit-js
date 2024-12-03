@@ -158,7 +158,7 @@ potenciar(100,25);*/
 // Desafio #9
 // - Crear seis funciones, (sumar, restar, multiplicar, dividir, modulo), cada función dede recibir 2 numeros y retornar un resultado según corresponda.
 
-function sumar(a, b){
+/*function sumar(a, b){
     return a + b;
 }
 
@@ -212,4 +212,103 @@ operar('resta', 5, 5);
 operar('multiplicacion', 5, 5);
 operar('dividir', 5, 5);
 operar('modulo', 5, 5);
-operar('potencia', 5, 5);
+operar('potencia', 5, 5);*/
+
+
+
+
+// Desafio #10
+// Crear una función que reciba 4 números, mostrar el resultado de: a / b * (c + d)
+
+function operar(a,b,c,d){
+    const resultado = a / b * (c + d);
+    //console.log(resultado)
+}
+
+operar(68,2,3,9);
+
+
+
+
+
+
+// Desafio # 11
+/* Crear una función que reciba 2 números, imprimir el mayor */
+
+function mayor(a, b){
+    if(a > b){
+        //console.log(a)
+    }
+    else{
+        //console.log(b)
+    }
+}
+
+mayor(2, 7)
+
+
+// Desafio # 12
+/* Crear una función que reciba un 1 número, imprimir si es negativo o positivo*/
+
+function comparar(a){
+    if (a >= 0){
+        //console.log('Positivo')
+    }
+    else{
+        //console.log('Negativo')
+    }
+}
+//comparar(5);
+//comparar(-5);
+
+
+
+
+// Desafio # 13
+
+/* crear una función que reciba 2 números, imprimir si el primer número divisible por el segundo.*/
+
+function esDivisible(a, b){
+    if (a % b === 0){
+        //console.log(a + " es divisible por " + b)
+    }
+    else{
+        //console.log(a + " no es divisible por " + b)
+    }
+}
+
+esDivisible(8,4);
+esDivisible(7,5);
+
+
+
+
+// Desafio # 14
+
+/* Crear una función que reciba 1 número, imprimir si es negativo o si es positivo o si es cero */
+
+function comparar(a){
+    if (a < 0){
+        console.log(a + " es Negativo")
+    }
+    else if(a > 0){
+        console.log(a + " es Positivo")
+    }
+    else{
+        console.log('Es Cero')
+    }
+}
+
+comparar(-2);
+comparar(2);
+comparar(0);
+
+
+
+
+
+
+
+
+
+
