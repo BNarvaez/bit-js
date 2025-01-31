@@ -287,7 +287,7 @@ esDivisible(7,5);
 
 /* Crear una función que reciba 1 número, imprimir si es negativo o si es positivo o si es cero */
 
-function comparar(a){
+/*function comparar(a){
     if (a < 0){
         console.log(a + " es Negativo")
     }
@@ -301,7 +301,18 @@ function comparar(a){
 
 comparar(-2);
 comparar(2);
-comparar(0);
+comparar(0);*/
+
+
+
+// Desafio # 15
+
+
+function formulario(){
+    
+}
+
+
 
 
 

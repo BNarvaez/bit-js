@@ -115,3 +115,29 @@ console.log(operacion)*/
 
 
 // 
+
+
+let idioma = "es"; 
+
+const factura = {
+  cliente: "BIT Corp",
+  numero1: 1021,
+  numero2:1022,
+  estado: "Completado",
+  status: "Completed",
+  directorio: "c:\\facturas\\finales\\BIT\\es\\data.txt",
+  directory: "c:\\invoices\\final\\BIT\\en\\data.txt"
+};
+
+let mensajeFactura = "";
+
+if (idioma === "es") {
+  mensajeFactura = `Generando factura para el cliente "${factura.cliente}" ...\nFactura\t#${factura.numero1}\t\t${factura.estado}!\nFactura\t#${factura.numero2}\t\t${factura.estado}!\n\nDirectorio de salida:\n${factura.directorio}`
+                  
+} else if (idioma === "en") {
+  mensajeFactura = `Generating invoice for client "${factura.cliente}" ...\nInvoice\t#${factura.numero1}\t\t${factura.status}!\nInvoice\t#${factura.numero2}\t\t${factura.estado}!\n\nOutput directory:\n${factura.directory}`
+} else {
+  mensajeFactura = "Idioma no válido.";
+}
+
+console.log(mensajeFactura);
