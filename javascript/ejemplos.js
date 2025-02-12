@@ -54,6 +54,8 @@ miVariable = undefined;
 //console.log(miVariable);
 
 /* FUNCIONES */
+
+// Función Regular
 function miFuncion() {
   console.log('Pepita Pérez');
 }
@@ -78,8 +80,59 @@ function miFuncion3() {
   //return 'cadena de texto';
 }
 
-let valorRetornado = miFuncion3();
+/* let valorRetornado = miFuncion3(); */
 //console.log(valorRetornado);
+
+
+// Funcion Expresada
+/*  */
+
+/* const miFnExpresada = function() {
+  console.log('Hola, soy una función expresada')
+}
+miFnExpresada(); */
+
+// Funcion Flecha - 
+
+/* const miFnFlecha = ()=>{
+  console.log('Hola, soy una función flecha')
+}
+miFnFlecha(); */
+
+
+// IIFE - Inmediately Invoked Function Expression
+/* Funcion expresada sin nombre y se llama de manera inmediata */
+
+/* (function () {
+  console.log('Hola, soy IIFE1');
+})();
+
+(()=>{console.log('Hola, soy IIFE2');})() */ // Flecha inmediata
+
+
+// HOISTING 
+
+/* miFnRegular();
+function miFnRegular () {
+  console.log('Hola, soy una función regular');
+}
+
+const miFnExpresada = ()=> {
+  console.log('Hola, soy una función expresada y flecha');
+}
+miFnExpresada(); */
+
+
+// THIS
+
+/* const x = this;
+console.log(this); */
+
+/* function miFuncion () {
+  return this;
+}
+valorRetornado = miFuncion();
+console.log(valorRetornado); */
 
 
 /* OPERADORES */
@@ -117,7 +170,7 @@ console.log(operacion)*/
 // 
 
 
-let idioma = "es"; 
+/* let idioma = "es"; 
 
 const factura = {
   cliente: "BIT Corp",
@@ -140,4 +193,5 @@ if (idioma === "es") {
   mensajeFactura = "Idioma no válido.";
 }
 
-console.log(mensajeFactura);
+console.log(mensajeFactura);*/
+
