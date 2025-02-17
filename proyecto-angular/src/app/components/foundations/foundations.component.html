@@ -1,0 +1,35 @@
+<h1>Fundamentos</h1>
+<hr>
+<br>
+<section>
+    <h2>Interpolación de propiedades</h2>
+    <p>Hola, {{nombreUsuario}}</p>
+</section>
+<hr>
+<section>
+    <h2>Control del flujo</h2>
+    <h4>Condicionales</h4>
+    @if(estaLogueado){
+        <p>¡Bienvenido!</p>
+    }@else {
+        <p>Por favor inicie sesión</p>
+    }
+
+    <h4>Ciclos</h4>
+    <ol>
+        @for(dev of devs; track $index){
+            <li>{{dev}}</li>
+        }
+    </ol>
+    <ul>
+        @for (os of ooss; track os.id) {
+            <li>{{os.name}}</li>
+        }
+    </ul>
+    
+</section>
+<hr>
+<section>
+    <h2>Pase de Datos</h2>
+    <app-padre></app-padre>
+</section>
