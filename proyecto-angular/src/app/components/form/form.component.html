@@ -1,1 +1,30 @@
-<p>form works!</p>
+<section>
+    <h2>Formulario</h2>
+    <div>
+        <h3>Template-driven</h3>
+        <form action="">
+            <label>Framework Favorito
+                <input type="text" name="frameworkFavorito" [(ngModel)]="frameworkFavorito">
+            </label>
+            <button type="button" (click)="mostrarFrameworkFavorito()">Ver framework favorito</button>
+        </form>
+        
+    </div>
+    <hr>
+    <div>
+        <h3>Reactive</h3>
+        <form [formGroup]="formLogin" (ngSubmit)="manejarLogin()">
+            <input type="text" placeholder="Username" formControlName="usuario">
+            <input type="password" placeholder="Password" formControlName="contrasenia">
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <hr>
+        <h3>Interfaces</h3>
+        @if (credenciales != null) {
+            <p>Nombre de usuario: {{credenciales.nombreUsuario}}</p>
+            <p>Contraseña: {{credenciales.contrasena}}</p>
+        }
+    </div>
+    
+</section>
+

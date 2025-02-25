@@ -1,13 +1,13 @@
-<h1>Fundamentos</h1>
+<h1>{{titulo1 |uppercase}}</h1>
 <hr>
 <br>
 <section>
-    <h2>Interpolación de propiedades</h2>
+    <h2>{{titulo2 | lowercase }}</h2>
     <p>Hola, {{nombreUsuario}}</p>
 </section>
 <hr>
 <section>
-    <h2>Control del flujo</h2>
+    <h2>{{titulo3 | lowercase }}</h2>
     <h4>Condicionales</h4>
     @if(estaLogueado){
         <p>¡Bienvenido!</p>
@@ -32,4 +32,26 @@
 <section>
     <h2>Pase de Datos</h2>
     <app-padre></app-padre>
+</section>
+<hr>
+<section>
+    <h2>Vistas aplazables / diferibles</h2>
+    @defer (on viewport) {
+        
+        <ol>
+            @for(dev of devs; track $index){
+                <li>{{dev}}</li>
+            }
+        </ol>
+    }@placeholder {
+        <p>Cargando...</p>
+    }@loading (minimum 5s) {
+        <p>Cargando...</p>
+    }
+</section>
+<hr>
+<section>
+    <p>Cantidad: {{cantidad | number}}</p>
+    <p>Fecha: {{fecha | date}}</p>
+    <p>Precio: {{precio | currency}} </p>
 </section>
