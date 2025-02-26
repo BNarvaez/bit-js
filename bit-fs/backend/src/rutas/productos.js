@@ -1,13 +1,15 @@
-import express from 'express'
+import express from 'express';
+import ProductosController from '../controladores/productos.js';
 
 const ruta = express.Router()
 
 // CRUD: Create, Read, Update, Delete
 
-ruta.post("/", (solicitud, respuesta) => {respuesta.send("Crear un producto")})
-ruta.get("/", (solicitud, respuesta) => {respuesta.send("Leer todos los productos")})
-ruta.get("/:id", (solicitud, respuesta) => {respuesta.send("Leer un producto")})
-ruta.put("/:id", (solicitud, respuesta) => {respuesta.send("Actualizar un producto")})
-ruta.delete("/:id", (solicitud, respuesta) => {respuesta.send("Eliminar un producto")})
+ruta.post("/", ProductosController.crear);
+ruta.get("/", ProductosController.leerTodos);
+ruta.get("/:id", ProductosController.leerUno);
+ruta.put("/:id", ProductosController.actualizar);
+ruta.delete("/:id", ProductosController.eliminar);
 
-export default ruta
+export default ruta;
+

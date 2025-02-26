@@ -1,7 +1,23 @@
+import 'dotenv/config';
+import ConexionMongodb from './conexiones/baseDeDatos.js';
 import servidor from './servidor.js';
 
-const puerto = 3000;
+const puerto = process.env.PORT;
 
-servidor.listen(puerto, () => {
-  console.log(`Servidor funcionando en http://localhost:${puerto}`);
+let mensaje = null;
+
+try {
+  /* ConexionMongodb.conexion(); */
+
+  servidor.listen(puerto, () => {
+    mensaje = `Servidor corriendo en el puerto ${puerto}`;
+    console.log(mensaje);
 });
+} catch (error) {
+  mensaje = `Error al intentar levantar el servidor: ${error}`;
+  console.log(mensaje);
+} finally {
+  console.log(mensaje);
+}
+
+

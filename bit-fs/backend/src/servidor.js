@@ -9,7 +9,7 @@ servidor.use("/productos", rutasProductos);
 
 
 servidor.get('/', (solicitud, respuesta) => {
-  respuesta.send('Raiz del servidor funcionando');
+  respuesta.json({ mensaje: '¡Hola, Bit! 🌎', data: null });
 });     
 
 export default servidor;
