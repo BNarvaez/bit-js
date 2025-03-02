@@ -4,11 +4,9 @@ import servidor from './servidor.js';
 
 const puerto = process.env.PORT;
 
-let mensaje = null;
+let mensaje = '';
 
 try {
-  /* ConexionMongodb.conexion(); */
-
   servidor.listen(puerto, () => {
     mensaje = `Servidor corriendo en el puerto ${puerto}`;
     console.log(mensaje);
