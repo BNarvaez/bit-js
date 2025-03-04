@@ -1,0 +1,28 @@
+@if (estaListo) {
+    <div>
+        <button type="button" (click)="eliminar()">Eliminar</button>
+        <button type="button" (click)="quiereActualizar()">Actualizar</button>
+        @if (actualizarListo) {
+            <section (submit)="actualizar()">
+                <form action="">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" name="titulo" [(ngModel)]="titulo" > <br>
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" name="precio" [(ngModel)]="precio" > <br>
+                    <label for="imagen">Imagen</label>
+                    <input type="url" id="imagen" name="imagen" [(ngModel)]="imagen" ><br>
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" [(ngModel)]="descripcion" ></textarea><br>
+                    <button type="submit">Actualizar producto</button>
+                </form>
+            </section>
+        }
+    </div>
+    <div class="producto">
+        <img src="{{imagen}}" alt="Imagen de {{titulo}}">
+        <p class="produc-titulo">{{titulo}}</p>
+        <p class="produc-precio">{{precio}}</p>
+        <p>{{descripcion}}</p>
+    </div>
+    
+}

@@ -16,9 +16,14 @@ class ProductosController {
     async leerTodos(solicitud, respuesta){
         try {
             const resultado = await ProductosModel.getAll();
+            const arreglo = [];
+            for (const producto of resultado) {
+                const {_id, titulo, imagen, descripcion} = producto;
+                arreglo.push({_id, titulo, imagen, descripcion});
+            }
             respuesta.json({
                 mensaje: 'Se obtuvieron todos los productos',
-                data: resultado,
+                data: arreglo,
             })
         } catch (error) {
             respuesta.json({
@@ -65,10 +70,10 @@ class ProductosController {
     
     async eliminar(solicitud, respuesta){
         try {
-            const resultado = await ProductosModel.delete(solicitud.params.id);
+            await ProductosModel.delete(solicitud.params.id);
             respuesta.json({
                 mensaje: 'Producto eliminado',
-                data: resultado,
+                data: null,
             })
         } catch (error) {
             respuesta.json({
